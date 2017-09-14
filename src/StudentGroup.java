@@ -232,13 +232,45 @@ public class StudentGroup implements StudentArrayOperation{
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
-		// Add your implementation here
-		return null;
+		double sum=0;
+		for(int i=0;i<students.length;i++)
+				{
+					
+							sum=sum+students[i].getAvgMark();
+					
+				}
+				double d=sum/students.length;
+				Student t[]=new Student[students.length];
+				int j=0;
+				for(int i=0;i<students.length;i++)
+				{
+						if(students[i].getAvgMark()>=d)
+						{
+							t[j]=students[i];
+							j++;
+						}
+								
+				}
+				Student t1[]=new Student[j];
+				for(int i=0;i<j;i++)
+				{
+					t1[i]=t[i];
+				}
+		return t1;
 	}
 
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
+		if( students==null)
+		{
+			throw new IllegalArgumentException("Error");
+		}
+		else
+		{
+						
+		}
+		
 		return null;
 	}
 }

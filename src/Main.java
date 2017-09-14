@@ -9,7 +9,7 @@ public class Main{
 	Date currentDate=new Date();
 	StudentGroup s=new StudentGroup(2);
 	Student s1=new Student(111457,"Praveen Raj",currentDate,9.8);
-	Student s2=new Student(111459,"Rajesh",currentDate,9.8);
+	Student s2=new Student(111459,"Rajesh",currentDate,9.0);
 	Student[] sg=new Student[2];
 	sg[0]=s1;
 	sg[1]=s2;
@@ -17,9 +17,10 @@ public class Main{
 	//s.setStudent(s1,1);
 	//s.addFirst(s2);
 	//s.addLast(s1);
-	s.remove(s1);
+	//s.remove(s1);
+	Student a[]=s.getStudentsWithMaxAvgMark();
 	//s.add(s1,1);
-	Student a[]=s.getStudents();
+	//Student a[]=s.getStudents();
 	//Student sample=s.getStudent(1);
 	//System.out.println("index 1"+sample.getId());
 	System.out.println(a.length);
